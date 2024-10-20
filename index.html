@@ -34,18 +34,34 @@
         h1 {
             color: #333;
         }
+        .content {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
+            background: #f9f9f9;
+        }
     </style>
+    <script>
+        function loadContent(page) {
+            fetch(page)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('content').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading the page:', error));
+        }
+    </script>
 </head>
 <body>
     <header>
         <h1>Mojgan Samandar A. E.</h1>
     </header>
     <nav>
-        <a href="#research">Research</a>
-        <a href="#cv">CV</a>
+        <a href="javascript:void(0);" onclick="loadContent('research.html');">Research</a>
+        <a href="javascript:void(0);" onclick="loadContent('cv.html');">CV</a>
         <a href="#teaching">Teaching</a>
     </nav>
-    <section id="about">
+    <section class="content" id="content">
         <h1>Hi!</h1>
         <p>I am an economist and data analyst with expertise in policy evaluation, econometrics, and data analytics. I have completed a Ph.D. in Economics from Scuola Superiore Sant'Anna and hold an M.Sc. in Big Data Analytics from Trent University. My research focuses on using quantitative and qualitative methods to evaluate science, technology, and innovation policies.</p>
 
