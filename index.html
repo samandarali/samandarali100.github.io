@@ -14,13 +14,16 @@
             background-color: #333;
             color: white;
             padding: 10px;
-            text-align: center;
+            display: flex; /* Use flexbox for header layout */
+            justify-content: space-between; /* Space between items */
+            align-items: center; /* Center items vertically */
         }
         nav {
             background-color: #444;
             padding: 10px;
             display: flex;
-            justify-content: center;
+            justify-content: space-between; /* Space between nav items */
+            align-items: center; /* Center items vertically */
         }
         nav a {
             color: white;
@@ -40,6 +43,12 @@
             margin-top: 20px;
             background: #f9f9f9;
         }
+        .profile-pic {
+            width: 50px; /* Adjust size as needed */
+            height: 50px; /* Adjust size as needed */
+            border-radius: 50%; /* Make it a circle */
+            margin-left: 15px; /* Space from the edge */
+        }
     </style>
     <script>
         function loadContent(page) {
@@ -55,8 +64,10 @@
 <body>
     <header>
         <h1>Mojgan Samandar A. E.</h1>
+        <img src="your-picture-url.jpg" alt="Profile Picture" class="profile-pic"> <!-- Replace with your image URL -->
     </header>
     <nav>
+        <a href="javascript:void(0);" onclick="loadContent('index.html');">Home</a> <!-- Link to home -->
         <a href="javascript:void(0);" onclick="loadContent('research.html');">Research</a>
         <a href="javascript:void(0);" onclick="loadContent('cv.html');">CV</a>
         <a href="#teaching">Teaching</a>
