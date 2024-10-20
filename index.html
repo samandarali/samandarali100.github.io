@@ -62,6 +62,10 @@
                 })
                 .catch(error => console.error('Error loading the page:', error));
         }
+
+        function loadMainPage() {
+            loadContent('index.html'); // Load the main page content
+        }
     </script>
 </head>
 <body>
@@ -69,7 +73,7 @@
         <h1>Mojgan Samandar A. E.</h1>
     </header>
     <nav>
-        <a href="javascript:void(0);" onclick="loadContent('index.html');">Mojgan Samandar A. E.</a>
+        <a href="javascript:void(0);" onclick="loadMainPage();">Mojgan Samandar A. E.</a>
         <a href="javascript:void(0);" onclick="loadContent('research.html');">Research</a>
         <a href="javascript:void(0);" onclick="loadContent('cv.html');">CV</a>
         <a href="#teaching">Teaching</a>
