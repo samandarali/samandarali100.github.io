@@ -3,86 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Publications - Mojgan Samandar Ali Eshtehardi</title>
+    <title>Mojgan Samandar A. E.</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
+            padding: 0;
         }
-        h1, h2 {
-            color: #333;
+        header {
+            background-color: #333;
+            color: white; /* Set header text color to white */
+            padding: 10px;
+            display: flex; /* Use flexbox for header layout */
+            justify-content: space-between; /* Space between items */
+            align-items: center; /* Center items vertically */
         }
-        h1 {
-            text-align: center;
+        nav {
+            background-color: #444;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between; /* Space between nav items */
+            align-items: center; /* Center items vertically */
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-       .nav {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .nav a {
+        nav a {
+            color: white;
             margin: 0 15px;
             text-decoration: none;
-            color: #007bff;
+            font-size: 16px;
         }
-        .nav a:hover {
-            text-decoration: underline;
+        section {
+            padding: 20px;
+            display: flex; /* Use flexbox for content layout */
+            align-items: center; /* Center items vertically */
         }
-        .publication {
-            margin-bottom: 20px;
+        h1 {
+            color: #333;
         }
-        .refereed-journal {
-            margin-bottom: 10px;
+        .content {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
+            background: #f9f9f9;
+            flex: 1; /* Allow content to take up available space */
         }
-        .title {
-            font-weight: bold;
+        .profile-pic {
+            width: 200px; /* Adjust size as needed */
+            height: 200px; /* Adjust size as needed */
+            border-radius: 50%; /* Make it a circle */
+            margin-right: 20px; /* Space from the text */
         }
     </style>
+    <script>
+        function loadContent(page) {
+            fetch(page)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('content').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading the page:', error));
+        }
+
+        function loadMainPage() {
+            loadContent('index.html'); // Load the main page content
+        }
+    </script>
 </head>
 <body>
+    <header>
+        <h1>Mojgan Samandar A. E.</h1>
+    </header>
+    <nav>
+        <a href="javascript:void(0);" onclick="loadMainPage();">Mojgan Samandar A. E.</a>
+        <a href="javascript:void(0);" onclick="loadContent('research.html');">Research</a>
+        <a href="javascript:void(0);" onclick="loadContent('cv.html');">CV</a>
+        <a href="#teaching">Teaching</a>
+    </nav>
+    <section class="content" id="content">
+        <!-- The initial content of the page will be here -->
+        <img src="MyPicture.JPG" alt="Profile Picture" class="profile-pic"> 
+        <div>
+            <h1>Hi!</h1>
+            <p>I am an economist and data analyst with expertise in policy evaluation, econometrics, and data analytics. I have completed a Ph.D. in Economics from Scuola Superiore Sant'Anna and hold an M.Sc. in Big Data Analytics from Trent University. My research focuses on using quantitative and qualitative methods to evaluate science, technology, and innovation policies.</p>
 
-<div class="container">
-    <h1><a href="index.html" style="text-decoration: none; color: inherit;">Research Publications - Mojgan Samandar Ali Eshtehardi</a></h1>
-
-    <h2>Articles in Refereed Journals (International)</h2>
-    <div class="publication">
-        <div class="refereed-journal"><span class="title">Samandar Ali Eshtehardi, M.</span>, Labour Market Landscape for Economics Graduates in Canada, Canadian Public Policy, Forthcoming March 2024.</div>
-        <div class="refereed-journal"><span class="title">Molazade, M</span>, <span class="title">Samandar Ali Eshtehardi, M.</span>, <span class="title">Hafezi, R.</span> (2024) Sustainable Fashion and Circular Economy: Historical Trends and Future Orientations. In A. Stefanakis, & K. Tsagarakis, Circular Economy and Sustainable Development: a necessary nexus for a sustainable future, Springer. <a href="https://link.springer.com/book/9783031660061#about-this-book">Link</a>.</div>
-        <div class="refereed-journal"><span class="title">Ghadimi, A.</span>, <span class="title">Samandar Ali Eshtehardi, M.</span>, <span class="title">Saviz, M.</span>, <span class="title">Mahdad, M.</span>, (2023) Grassroots Innovations and innovators: the case of Iran, Journal of Innovation and Development, 1-24. DOI: <a href="https://doi.org/10.1080/2157930X.2023.2233208">https://doi.org/10.1080/2157930X.2023.2233208</a></div>
-        <div class="refereed-journal"><span class="title">Bagheri, S. K.</span>, <span class="title">Goodarzi, M.</span>, <span class="title">Samandar Ali Eshtehardi, M.</span>, (2021). Popularity of Patent Commercialization Policies: Iran as a Case, World Patent Information, 66. DOI: <a href="https://doi.org/10.1016/j.wpi.2021.102063">https://doi.org/10.1016/j.wpi.2021.102063</a></div>
-        <div class="refereed-journal"><span class="title">Samandar Ali Eshtehardi, M.</span> & <span class="title">Goodarzi, M.</span> (2020). Improving the Iranian Industrial Property System (IPS): A comparative case study of Iran and South Korea. World Patent Information, 63, 101991. DOI: <a href="https://doi.org/10.1016/j.wpi.2020.101991">10.1016/j.wpi.2020.101991</a></div>
-        <div class="refereed-journal"><span class="title">Janavi, E.</span>, <span class="title">Mansourzadeh, M. J.</span>, <span class="title">Samandar Ali Eshtehardi, M.</span>, (2020). A methodology for developing scientific diversification strategy of countries. Scientometrics, 1-36. DOI: <a href="https://doi.org/10.1007/s11192-020-03685-1">10.1007/s11192-020-03685-1</a></div>
-        <div class="refereed-journal"><span class="title">Bagheri, S.</span>; <span class="title">Raoufi, P.</span>; <span class="title">Samandar Ali Eshtehardi, M.</span>; <span class="title">Shaverdy, S.</span>; <span class="title">Ramezani, B.</span> & <span class="title">Mardani, A.</span> (2018) Using the crowd for business model innovation: the case of Digikala, The journal of R&D Management. DOI: <a href="https://doi.org/10.1111/radm.12353">10.1111/radm.12353</a></div>
-        <div class="refereed-journal"><span class="title">Samandar Ali Eshtehardi, M.</span>, <span class="title">Bagheri, S.K.</span> & <span class="title">Di Minin, A.</span> (2016). Regional Innovative Behaviour: Evidence from Iran, Technological Forecasting & Social Change Journal. DOI: <a href="https://doi.org/10.1016/J.TECHFORE.2016.02.011">10.1016/J.TECHFORE.2016.02.011</a></div>
-        <div class="refereed-journal"><span class="title">Bagheri, S. K.</span>; <span class="title">Samandar Ali Eshtehardi, M.</span>. & <span class="title">Goodarzi, M.</span> (2015). Innovative activities in Iran: A first glance. World Patent Information, 42, 28-34. DOI: <a href="https://doi.org/10.1016/j.wpi.2015.05.003">10.1016/j.wpi.2015.05.003</a></div>
-    </div>
-
-    <h2>Articles in Refereed Journals (Iranian)</h2>
-    <div class="publication">
-        <div class="refereed-journal"><span class="title">Samandar Ali Eshtehardi, M.</span>, <span class="title">Goodarzi, M.</span>, <span class="title">Ghorbani, M.H.</span>, (2022) Strategies to fulfil the mission of education in the entrepreneurial university: a framework synthesis and focus group study, Strategic Studies of Public Policy, 12(44), 108-162. DOI: <a href="https://doi.org/10.22034/SSPP.2022.556123.3233">10.22034/SSPP.2022.556123.3233</a>.</div>
-        <div class="refereed-journal"><span class="title">Samandar Ali Eshtehardi, M.</span>, (2022) Structural-interpretative modelling of strategies for achieving the mission of education in an entrepreneurial and community-oriented university, Quarterly Journal of Research and Planning in Higher Education, 28(3), 33-64. DOI: <a href="https://doi.org/10.52547/IRPHE.28.2.33">10.52547/IRPHE.28.2.33</a>.</div>
-        <div class="refereed-journal"><span class="title">Bozorgi, S. H. R.</span>, <span class="title">Samandar Ali Eshtehardi, M.</span>, & <span class="title">Lotfiheravi, M.</span> (2021). Innovative Marketing: A literature Review. Popularization of Science, 12(2), 107-136. doi: <a href="https://doi.org/10.22034/popsci.2022.304368.1123">10.22034/popsci.2022.304368.1123</a>.</div>
-        <div class="refereed-journal"><span class="title">Samandar Ali Eshtehardi, M.</span> (2021). Theoretical Framework of Academic Entrepreneurship. Social Responsibility Journal, 15(1), 124-141. DOI: <a href="https://doi.org/10.1108/SAMPJ-03-2021-0202">10.1108/SAMPJ-03-2021-0202</a>.</div>
-        <div class="refereed-journal"><span class="title">Samandar Ali Eshtehardi, M.</span> (2020). The Role of Universities in Developing Academic Entrepreneurship. Strategic Studies of Public Policy, 10(38), 49-71. DOI: <a href="https://doi.org/10.22034/SSPP.2020.471249.1810">10.22034/SSPP.2020.471249.1810</a>.</div>
-        <div class="refereed-journal"><span class="title">Samandar Ali Eshtehardi, M.</span>, <span class="title">Goodarzi, M.</span>, (2020) Taxonomy of Barriers to Academic Entrepreneurship: The Case of Iran, New Ideas in Education, 16(2), 49-72. DOI: <a href="https://doi.org/10.30479/NIE.2020.9118">10.30479/NIE.2020.9118</a>.</div>
-        <div class="refereed-journal"><span class="title">Samandar Ali Eshtehardi, M.</span>, <span class="title">Goodarzi, M.</span>, (2020). Academic Entrepreneurship and its Relation to Knowledge Production: A Review of the Literature. Knowledge Management Research, 1(1), 1-22. DOI: <a href="https://doi.org/10.22034/KMR.2020.100017">10.22034/KMR.2020.100017</a>.</div>
-    </div>
-
-    <h2>Chapters in Books</h2>
-    <div class="publication">
-        <div class="refereed-journal"><span class="title">Samandar Ali Eshtehardi, M.</span>, (2024) Analyzing the Landscape of Economics Graduate Programs: A Comprehensive Overview, in G. B. Singh & S. J. Ingle, eds. A Global Perspective on Higher Education. New York: Springer. Forthcoming.</div>
-    </div>
-</div>
-
+            <h2>Research Interests</h2>
+            <p>My areas of interest include policy analysis, econometrics, innovation systems, and big data analytics. I have applied my expertise in various sectors, from public policy to industrial economics.</p>
+        </div>
+    </section>
 </body>
 </html>
