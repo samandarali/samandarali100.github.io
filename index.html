@@ -53,11 +53,6 @@
             border-radius: 50%; /* Make it a circle */
             margin-right: 20px; /* Space from the text */
         }
-        iframe {
-            width: 100%;
-            height: 600px; /* Adjust height for PDF viewing */
-            border: none;
-        }
     </style>
     <script>
         function loadContent(page) {
@@ -81,13 +76,16 @@
                 </div>
             `;
         }
+
         function loadCV() {
-            // Set the content to an embedded PDF
+            // Set the content to display the CV download message
             document.getElementById('content').innerHTML = `
-                <iframe src="MojganSamandar_CV.pdf"></iframe>
+                <h1>Download CV</h1>
+                <p>You can download my CV by clicking the link below:</p>
+                <a href="MojganSamandar_CV.pdf" download>Download my CV</a>
             `;
         }
-        
+
         // Load the main page on initial load
         window.onload = loadMainPage;
     </script>
@@ -99,7 +97,7 @@
     <nav>
         <a href="javascript:void(0);" onclick="loadMainPage();">Home</a>
         <a href="javascript:void(0);" onclick="loadContent('research.html');">Research</a>
-        <a href="javascript:void(0);" onclick="loadContent('cv.html');">CV</a>
+        <a href="javascript:void(0);" onclick="loadCV();">CV</a>
         <a href="#teaching">Teaching</a>
     </nav>
     <section class="content" id="content">
