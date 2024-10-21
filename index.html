@@ -48,8 +48,8 @@
             flex: 1; /* Allow content to take up available space */
         }
         .profile-pic {
-            width: 250px; /* Adjust size as needed */
-            height: 250px; /* Adjust size as needed */
+            width: 200px; /* Adjust size as needed */
+            height: 200px; /* Adjust size as needed */
             border-radius: 50%; /* Make it a circle */
             margin-right: 20px; /* Space from the text */
         }
@@ -65,8 +65,20 @@
         }
 
         function loadMainPage() {
-            loadContent('index.html'); // Load the main page content
+            // Load the same content directly without fetching from another file
+            document.getElementById('content').innerHTML = `
+                <img src="MyPicture.JPG" alt="Profile Picture" class="profile-pic">
+                <div>
+                    <h1>Hi!</h1>
+                    <p>I am an economist and data analyst with expertise in policy evaluation, econometrics, and data analytics. I have completed a Ph.D. in Economics from Scuola Superiore Sant'Anna and hold an M.Sc. in Big Data Analytics from Trent University. My research focuses on using quantitative and qualitative methods to evaluate science, technology, and innovation policies.</p>
+                    <h2>Research Interests</h2>
+                    <p>My areas of interest include policy analysis, econometrics, innovation systems, and big data analytics. I have applied my expertise in various sectors, from public policy to industrial economics.</p>
+                </div>
+            `;
         }
+
+        // Load the main page on initial load
+        window.onload = loadMainPage;
     </script>
 </head>
 <body>
@@ -74,7 +86,7 @@
         <h1>Mojgan Samandar A. E.</h1>
     </header>
     <nav>
-        <a href="javascript:void(0);" onclick="loadMainPage();">Home</a> 
+        <a href="javascript:void(0);" onclick="loadMainPage();">Home</a>
         <a href="javascript:void(0);" onclick="loadContent('research.html');">Research</a>
         <a href="javascript:void(0);" onclick="loadContent('cv.html');">CV</a>
         <a href="#teaching">Teaching</a>
