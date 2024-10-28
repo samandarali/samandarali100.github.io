@@ -5,113 +5,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mojgan Samandar A. E.</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Reset */
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-        header {
-            background-color: #333;
-            color: white; /* Set header text color to white */
-            padding: 10px;
-            display: flex; /* Use flexbox for header layout */
-            justify-content: space-between; /* Space between items */
-            align-items: center; /* Center items vertically */
-        }
-        nav {
-            background-color: #444;
-            padding: 10px;
+
+        /* Body Styling */
+        body {
             display: flex;
-            justify-content: space-between; /* Space between nav items */
-            align-items: center; /* Center items vertically */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f9;
         }
-        nav a {
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: 250px;
+            background-color: #333;
             color: white;
-            margin: 0 15px;
+            padding: 20px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Profile Image */
+        .profile-image {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            margin-bottom: 15px;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            color: #ddd;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+        }
+
+        .contact-info a:hover {
+            color: #ccc;
+        }
+
+        /* Navigation */
+        nav {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 10px 0;
+        }
+
+        nav ul li a {
+            color: #ddd;
             text-decoration: none;
             font-size: 16px;
-            cursor: pointer; /* Change cursor to pointer for links */
+            text-align: center;
+            display: block;
+            padding: 8px;
+            border-radius: 4px;
+            transition: background 0.3s;
         }
-        section {
-            padding: 20px;
-            display: flex; /* Use flexbox for content layout */
-            align-items: center; /* Center items vertically */
+
+        nav ul li a:hover {
+            background-color: #444;
         }
-        h1 {
-            color: #333;
-        }
+
+        /* Main Content */
         .content {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-top: 20px;
-            background: #f9f9f9;
-            flex: 1; /* Allow content to take up available space */
+            flex: 1;
+            padding: 20px;
         }
-        .profile-pic {
-            width: 200px; /* Adjust size as needed */
-            height: 200px; /* Adjust size as needed */
-            border-radius: 50%; /* Make it a circle */
-            margin-right: 20px; /* Space from the text */
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.5em;
         }
     </style>
-    <script>
-        function loadContent(page) {
-            fetch(page)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('content').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading the page:', error));
-        }
-
-        function loadMainPage() {
-            // Load the same content directly without fetching from another file
-            document.getElementById('content').innerHTML = `
-                <img src="MyPicture.JPG" alt="Profile Picture" class="profile-pic">
-                <div>
-                    <h1>Hi!</h1>
-                    <p>I am an economist and data analyst with expertise in policy evaluation, econometrics, and data analytics. I have completed a Ph.D. in Economics from Scuola Superiore Sant'Anna and hold an M.Sc. in Big Data Analytics from Trent University. My research focuses on using quantitative and qualitative methods to evaluate science, technology, and innovation policies.</p>
-                    <h2>Research Interests</h2>
-                    <p>My areas of interest include policy analysis, econometrics, innovation systems, and big data analytics. I have applied my expertise in various sectors, from public policy to industrial economics.</p>
-                </div>
-            `;
-        }
-
-        function loadCV() {
-            // Set the content to display the CV download message
-            document.getElementById('content').innerHTML = `
-               
-                <p>You can download my CV by clicking the link below:</p>
-                <a href="Mojgan Samandar-CV.pdf" download>Download my CV</a>
-    `;
-        }
-
-        // Load the main page on initial load
-        window.onload = loadMainPage;
-    </script>
 </head>
 <body>
-    <header>
-        <h1>Mojgan Samandar A. E.</h1>
-    </header>
-    <nav>
-        <a href="javascript:void(0);" onclick="loadMainPage();">Home</a>
-        <a href="javascript:void(0);" onclick="loadContent('research.html');">Research</a>
-        <a href="javascript:void(0);" onclick="loadCV();">CV</a>
-        <a href="javascript:void(0);" onclick="loadContent('Teaching and Graduate Students.htm');">Teaching and Student Supervision</a>
-        <a href="javascript:void(0);" onclick="loadContent('project.html');">Project</a>
 
-    </nav>
-    <section class="content" id="content">
-        <!-- The initial content of the page will be here -->
-        <img src="MyPicture.JPG" alt="Profile Picture" class="profile-pic"> 
-        <div>
-            <h1>Hi!</h1>
-            <p>I am an economist and data analyst with expertise in policy evaluation, econometrics, and data analytics. I have completed a Ph.D. in Economics from Scuola Superiore Sant'Anna and hold an M.Sc. in Big Data Analytics from Trent University. My research focuses on using quantitative and qualitative methods to evaluate science, technology, and innovation policies.</p>
-
-            <h2>Research Interests</h2>
-            <p>My areas of interest include policy analysis, econometrics, innovation systems, and big data analytics. I have applied my expertise in various sectors, from public policy to industrial economics.</p>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <img src="your-picture-url.jpg.JPG" alt="Profile Picture" class="profile-image">
+        <div class="contact-info">
+            <h2>Mojgan Samandar A. E.</h2>
+            <p>ON, Canada</p>
+            <a href="mailto:mojgan.samandar@gmail.com">mojgan.samandar@gmail.com</a>
+            <a href="https://linkedin.com/in/mojgan-samandar">LinkedIn</a>
+            <a href="https://scholar.google.com/citations?user=PS_CX0AAAAAJ">Google Scholar</a>
+            <a href="https://orcid.org/0000-0001-5770-7398">ORCID</a>
         </div>
-    </section>
+        <nav>
+            <ul>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#cv">CV</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="content">
+        <header>Mojgan Samandar A. E.'s Website</header>
+        
+        <!-- Sections -->
+        <section id="publications">
+            <h2>Publications</h2>
+            <p>Details of publications go here.</p>
+        </section>
+        
+        <section id="cv">
+            <h2>CV</h2>
+            <p>Link to CV or CV details go here.</p>
+        </section>
+        
+        <section id="research">
+            <h2>Research</h2>
+            <p>Research projects and areas of interest go here.</p>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Contact information and form (if applicable) go here.</p>
+        </section>
+    </div>
 </body>
 </html>
